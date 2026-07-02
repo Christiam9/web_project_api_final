@@ -1,6 +1,6 @@
 import "./PetCard.css";
 
-function PetCard() {
+function PetCard({ name, species, age, city }) {
   return (
     <article className="pet-card">
       <img
@@ -10,11 +10,13 @@ function PetCard() {
       />
 
       <div className="pet-card__content">
-        <h3 className="pet-card__name">Luna</h3>
+        <h3 className="pet-card__name">{name}</h3>
 
-        <p className="pet-card__description">
-          Perra mestiza de 2 años, amigable y en busca de un hogar.
-        </p>
+        <p className="pet-card__description">{species}</p>
+
+        <p className="pet-card__age">{age}</p>
+
+        <p className="pet-card__city">{city}</p>
 
         <button className="pet-card__button">Ver más</button>
       </div>
