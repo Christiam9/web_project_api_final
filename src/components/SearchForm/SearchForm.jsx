@@ -15,12 +15,12 @@ function SearchForm() {
 
   return (
     <section className="search">
-      <h2 className="search__title">Buscar noticias</h2>
+      <h2 className="search__title"> Encuentra tu próximo mejor amigo</h2>
 
       <form className="search__form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Escribe un tema..."
+          placeholder="Busca por raza, especie o nombre..."
           className="search__input"
           value={query}
           onChange={handleChange}
@@ -28,7 +28,7 @@ function SearchForm() {
         />
 
         <button type="submit" className="search__button">
-          Buscar
+          Buscar mascota
         </button>
       </form>
     </section>
