@@ -1,0 +1,13 @@
+.pet-list {
+  padding: 40px;
+}
+
+.pet-list__title {
+  margin-bottom: 30px;
+}
+
+.pet-list__grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
