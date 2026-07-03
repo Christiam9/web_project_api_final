@@ -10,17 +10,15 @@ function SearchForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(query);
+    console.log("Buscando:", query);
   };
 
   return (
     <section className="search">
-      <h2 className="search__title"> Encuentra tu próximo mejor amigo</h2>
-
       <form className="search__form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Busca por raza, especie o nombre..."
+          placeholder="Busca por nombre, raza o ciudad..."
           className="search__input"
           value={query}
           onChange={handleChange}
@@ -28,7 +26,7 @@ function SearchForm() {
         />
 
         <button type="submit" className="search__button">
-          Buscar mascota
+          Buscar
         </button>
       </form>
     </section>

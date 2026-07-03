@@ -1,7 +1,16 @@
 .about {
-  padding: 40px;
+  padding: 60px 40px;
+  text-align: center;
 }
 
 .about__title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.about__text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
 }

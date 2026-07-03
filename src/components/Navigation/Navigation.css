@@ -1,15 +1,18 @@
 .nav__list {
   display: flex;
-  gap: 15px;
+  gap: 24px;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 .nav__item {
   cursor: pointer;
-  color: #ccc;
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .nav__item:hover {
-  color: white;
+  color: var(--color-accent);
 }

@@ -33,6 +33,10 @@ function PetCardList() {
   return (
     <section className="pet-list">
       <h2 className="pet-list__title">Mascotas en adopción</h2>
+      <p className="pet-list__subtitle">
+        Conoce algunos de los animales que buscan una familia y un hogar lleno
+        de amor.
+      </p>
 
       <div className="pet-list__grid">
         {pets.map((pet) => (

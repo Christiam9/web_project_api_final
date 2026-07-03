@@ -8,7 +8,6 @@ function Main() {
   return (
     <main className="main">
       <Hero />
-      <SearchForm />
       <PetCardList />
       <HowItWorks />
     </main>

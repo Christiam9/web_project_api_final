@@ -1,9 +1,17 @@
 .pet-list {
-  padding: 40px;
+  padding: 20px 40px 40px;
 }
 
 .pet-list__title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--color-primary);
+}
+.pet-list__subtitle {
+  margin: 0 0 30px;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 18px;
 }
 
 .pet-list__grid {

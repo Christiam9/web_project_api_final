@@ -6,15 +6,21 @@ function PetCard({ pet }) {
       <img className="pet-card__image" src={pet.image} alt={pet.name} />
 
       <div className="pet-card__content">
+        <button className="pet-card__favorite" type="button">
+          🤍
+        </button>
+
         <h3 className="pet-card__name">{pet.name}</h3>
 
-        <p className="pet-card__description">{pet.species}</p>
+        <p className="pet-card__description">🐾 {pet.species}</p>
 
-        <p className="pet-card__age">{pet.age}</p>
+        <p className="pet-card__age">🎂 {pet.age}</p>
 
-        <p className="pet-card__city">{pet.city}</p>
+        <p className="pet-card__city">📍 {pet.city}</p>
 
-        <button className="pet-card__button">Ver más</button>
+        <button className="pet-card__button" type="button">
+          Conocer mascota
+        </button>
       </div>
     </article>
   );

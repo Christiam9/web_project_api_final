@@ -1,4 +1,5 @@
 import "./Hero.css";
+import SearchForm from "../SearchForm/SearchForm";
 
 function Hero() {
   return (
@@ -11,8 +12,9 @@ function Hero() {
         <p className="hero__description">
           Explora mascotas en adopción y ayúdalas a encontrar una familia.
         </p>
+        <SearchForm />
 
-        <button className="hero__button">Ver mascotas</button>
+        <button className="hero__button">Explorar mascotas</button>
       </div>
     </section>
   );
