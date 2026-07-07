@@ -6,13 +6,17 @@
   padding: 0;
 }
 
-.nav__item {
-  cursor: pointer;
+.nav__link {
+  text-decoration: none;
   color: var(--color-primary);
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-.nav__item:hover {
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+.nav__link_active {
   color: var(--color-accent);
 }

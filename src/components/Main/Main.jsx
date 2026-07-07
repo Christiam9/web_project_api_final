@@ -1,5 +1,4 @@
 import "./Main.css";
-import SearchForm from "../SearchForm/SearchForm";
 import PetCardList from "../PetCardList/PetCardList";
 import Hero from "../Hero/Hero";
 import HowItWorks from "../HowItWorks/HowItWorks";
