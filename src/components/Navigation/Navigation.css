@@ -20,3 +20,24 @@
 .nav__link_active {
   color: var(--color-accent);
 }
+
+@media screen and (max-width: 768px) {
+  .nav__list {
+    gap: 18px;
+  }
+
+  .nav__link {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav__list {
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+}

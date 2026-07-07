@@ -47,16 +47,15 @@
 }
 
 .pet-card__name {
-  margin: 0 0 10px;
-  font-size: 24px;
   margin: 0;
+  font-size: 24px;
   color: var(--color-primary);
 }
 
 .pet-card__description,
 .pet-card__age,
 .pet-card__city {
-  margin: 8px 0;
+  margin: 0;
   color: var(--color-text-light);
 }
 
@@ -74,4 +73,33 @@
 
 .pet-card__button:hover {
   opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .pet-card {
+    width: 300px;
+  }
+
+  .pet-card__image {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pet-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .pet-card__image {
+    height: 220px;
+  }
+
+  .pet-card__name {
+    font-size: 22px;
+  }
+
+  .pet-card__button {
+    padding: 14px;
+  }
 }

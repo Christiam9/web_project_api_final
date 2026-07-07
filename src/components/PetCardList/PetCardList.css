@@ -16,6 +16,45 @@
 
 .pet-list__grid {
   display: flex;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .pet-list {
+    padding: 20px 24px 32px;
+  }
+
+  .pet-list__title {
+    font-size: 32px;
+  }
+
+  .pet-list__subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pet-list__grid {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pet-list {
+    padding: 20px 16px 24px;
+  }
+
+  .pet-list__title {
+    font-size: 28px;
+  }
+
+  .pet-list__subtitle {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .pet-list__grid {
+    gap: 20px;
+  }
 }

@@ -44,3 +44,39 @@
 .search__button:hover {
   opacity: 0.9;
 }
+
+@media screen and (max-width: 768px) {
+  .search {
+    padding: 24px;
+  }
+
+  .search__title {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .search__input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search {
+    padding: 20px 16px;
+  }
+
+  .search__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .search__form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search__input,
+  .search__button {
+    width: 100%;
+  }
+}
