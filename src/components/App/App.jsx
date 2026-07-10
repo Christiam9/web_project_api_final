@@ -10,14 +10,22 @@ import "./App.css";
 
 function App() {
   const [dogs, setDogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
+    setIsLoading(true);
+
     getDogs()
       .then((data) => {
         setDogs(data);
       })
       .catch((err) => {
         console.error(err);
+        setError("No fue posible cargar las mascotas.");
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
@@ -26,7 +34,10 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home dogs={dogs} />} />
+        <Route
+          path="/"
+          element={<Home dogs={dogs} isLoading={isLoading} error={error} />}
+        />
         <Route path="/favoritos" element={<Favorites />} />
       </Routes>
 
