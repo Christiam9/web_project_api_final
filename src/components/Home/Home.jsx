@@ -1,10 +1,10 @@
 import Main from "../Main/Main";
 import About from "../About/About";
 
-function Home() {
+function Home({ dogs }) {
   return (
     <>
-      <Main />
+      <Main dogs={dogs} />
       <About />
     </>
   );

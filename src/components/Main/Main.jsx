@@ -3,11 +3,11 @@ import PetCardList from "../PetCardList/PetCardList";
 import Hero from "../Hero/Hero";
 import HowItWorks from "../HowItWorks/HowItWorks";
 
-function Main() {
+function Main({ dogs }) {
   return (
     <main className="main">
       <Hero />
-      <PetCardList />
+      <PetCardList dogs={dogs} />
       <HowItWorks />
     </main>
   );
