@@ -12,10 +12,9 @@ function App() {
   const [dogs, setDogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  //const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    setIsLoading(true);
-
     getDogs()
       .then((data) => {
         setDogs(data);
