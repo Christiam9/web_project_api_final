@@ -3,10 +3,10 @@ import PetCardList from "../PetCardList/PetCardList";
 import Hero from "../Hero/Hero";
 import HowItWorks from "../HowItWorks/HowItWorks";
 
-function Main({ dogs, isLoading, error }) {
+function Main({ dogs, isLoading, error, searchQuery, setSearchQuery }) {
   return (
     <main className="main">
-      <Hero />
+      <Hero searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <PetCardList dogs={dogs} isLoading={isLoading} error={error} />
       <HowItWorks />
     </main>

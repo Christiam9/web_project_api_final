@@ -12,7 +12,7 @@ function App() {
   const [dogs, setDogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
-  //const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     getDogs()
@@ -28,6 +28,10 @@ function App() {
       });
   }, []);
 
+  const filteredDogs = dogs.filter((dog) =>
+    dog.breeds[0].name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
     <>
       <Header />
@@ -35,8 +39,17 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home dogs={dogs} isLoading={isLoading} error={error} />}
+          element={
+            <Home
+              dogs={filteredDogs}
+              isLoading={isLoading}
+              error={error}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
+          }
         />
+
         <Route path="/favoritos" element={<Favorites />} />
       </Routes>
 

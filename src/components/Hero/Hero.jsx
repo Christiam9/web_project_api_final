@@ -1,7 +1,7 @@
 import "./Hero.css";
 import SearchForm from "../SearchForm/SearchForm";
 
-function Hero() {
+function Hero({ searchQuery, setSearchQuery }) {
   return (
     <section className="hero">
       <div className="hero__content">
@@ -12,7 +12,7 @@ function Hero() {
         <p className="hero__description">
           Explora mascotas en adopción y ayúdalas a encontrar una familia.
         </p>
-        <SearchForm />
+        <SearchForm searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
         <button className="hero__button">Explorar mascotas</button>
       </div>

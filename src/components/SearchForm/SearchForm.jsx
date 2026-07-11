@@ -1,16 +1,12 @@
-import { useState } from "react";
 import "./SearchForm.css";
 
-function SearchForm() {
-  const [query, setQuery] = useState("");
-
+function SearchForm({ searchQuery, setSearchQuery }) {
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    setSearchQuery(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Buscando:", query);
   };
 
   return (
@@ -20,9 +16,8 @@ function SearchForm() {
           type="text"
           placeholder="Busca por nombre, raza o ciudad..."
           className="search__input"
-          value={query}
+          value={searchQuery}
           onChange={handleChange}
-          required
         />
 
         <button type="submit" className="search__button">
