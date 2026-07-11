@@ -1,6 +1,6 @@
 import "./PetCard.css";
 
-function PetCard({ pet }) {
+function PetCard({ pet, handleFavorite, isFavorite }) {
   const breed = pet.breeds[0];
 
   return (
@@ -8,8 +8,12 @@ function PetCard({ pet }) {
       <img className="pet-card__image" src={pet.url} alt={breed.name} />
 
       <div className="pet-card__content">
-        <button className="pet-card__favorite" type="button">
-          🤍
+        <button
+          className="pet-card__favorite"
+          type="button"
+          onClick={() => handleFavorite(pet)}
+        >
+          {isFavorite ? "❤️" : "🤍"}
         </button>
 
         <h3 className="pet-card__name">{breed.name}</h3>

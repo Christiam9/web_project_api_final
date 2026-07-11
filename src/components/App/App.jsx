@@ -13,6 +13,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     getDogs()
@@ -27,6 +28,16 @@ function App() {
         setIsLoading(false);
       });
   }, []);
+
+  const handleFavorite = (pet) => {
+    const isFavorite = favorites.some((favorite) => favorite.id === pet.id);
+
+    if (isFavorite) {
+      setFavorites(favorites.filter((favorite) => favorite.id !== pet.id));
+    } else {
+      setFavorites([...favorites, pet]);
+    }
+  };
 
   const filteredDogs = dogs.filter((dog) =>
     dog.breeds[0].name.toLowerCase().includes(searchQuery.toLowerCase()),
@@ -46,6 +57,8 @@ function App() {
               error={error}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
+              handleFavorite={handleFavorite}
+              favorites={favorites}
             />
           }
         />

@@ -1,7 +1,15 @@
 import Main from "../Main/Main";
 import About from "../About/About";
 
-function Home({ dogs, isLoading, error, searchQuery, setSearchQuery }) {
+function Home({
+  dogs,
+  isLoading,
+  error,
+  searchQuery,
+  setSearchQuery,
+  handleFavorite,
+  favorites,
+}) {
   return (
     <>
       <Main
@@ -10,6 +18,8 @@ function Home({ dogs, isLoading, error, searchQuery, setSearchQuery }) {
         error={error}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        handleFavorite={handleFavorite}
+        favorites={favorites}
       />
       <About />
     </>

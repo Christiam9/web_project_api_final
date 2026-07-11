@@ -2,7 +2,7 @@ import "./PetCardList.css";
 import PetCard from "../PetCard/PetCard";
 import Preloader from "../Preloader/Preloader";
 
-function PetCardList({ dogs, isLoading, error }) {
+function PetCardList({ dogs, isLoading, error, handleFavorite, favorites }) {
   if (isLoading) {
     return <Preloader />;
   }
@@ -24,9 +24,20 @@ function PetCardList({ dogs, isLoading, error }) {
       </p>
 
       <div className="pet-list__grid">
-        {dogs.map((dog) => (
-          <PetCard key={dog.id} pet={dog} />
-        ))}
+        {dogs.map((dog) => {
+          const isFavorite = favorites.some(
+            (favorite) => favorite.id === dog.id,
+          );
+
+          return (
+            <PetCard
+              key={dog.id}
+              pet={dog}
+              handleFavorite={handleFavorite}
+              isFavorite={isFavorite}
+            />
+          );
+        })}
       </div>
     </section>
   );
