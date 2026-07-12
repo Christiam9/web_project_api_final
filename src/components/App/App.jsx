@@ -13,7 +13,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [favorites, setFavorites] = useState([]);
+  const [visibleCards, setVisibleCards] = useState(3);
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem("favorites");
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
 
   useEffect(() => {
     getDogs()
@@ -29,6 +33,10 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
+
   const handleFavorite = (pet) => {
     const isFavorite = favorites.some((favorite) => favorite.id === pet.id);
 
@@ -37,6 +45,10 @@ function App() {
     } else {
       setFavorites([...favorites, pet]);
     }
+  };
+
+  const handleShowMore = () => {
+    setVisibleCards((prev) => prev + 3);
   };
 
   const filteredDogs = dogs.filter((dog) =>
@@ -59,11 +71,18 @@ function App() {
               setSearchQuery={setSearchQuery}
               handleFavorite={handleFavorite}
               favorites={favorites}
+              visibleCards={visibleCards}
+              handleShowMore={handleShowMore}
             />
           }
         />
 
-        <Route path="/favoritos" element={<Favorites />} />
+        <Route
+          path="/favoritos"
+          element={
+            <Favorites favorites={favorites} handleFavorite={handleFavorite} />
+          }
+        />
       </Routes>
 
       <Footer />

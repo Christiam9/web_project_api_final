@@ -1,8 +1,18 @@
-function Favorites() {
+import PetCardList from "../PetCardList/PetCardList";
+
+function Favorites({ favorites, handleFavorite }) {
   return (
     <main className="favorites">
-      <h2>Mis favoritos</h2>
-      <p>Aquí aparecerán las mascotas que el usuario marque como favoritas.</p>
+      <PetCardList
+        dogs={favorites}
+        isLoading={false}
+        error=""
+        handleFavorite={handleFavorite}
+        favorites={favorites}
+        title="Mis favoritos ❤️"
+        subtitle="Aquí encontrarás las mascotas que has guardado."
+        emptyMessage="Aún no has agregado mascotas a favoritos."
+      />
     </main>
   );
 }

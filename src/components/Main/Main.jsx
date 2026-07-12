@@ -11,6 +11,8 @@ function Main({
   setSearchQuery,
   handleFavorite,
   favorites,
+  visibleCards,
+  handleShowMore,
 }) {
   return (
     <main className="main">
@@ -21,6 +23,11 @@ function Main({
         error={error}
         handleFavorite={handleFavorite}
         favorites={favorites}
+        title="Mascotas en adopción"
+        subtitle="Conoce algunos de los animales que buscan una familia y un hogar lleno de amor."
+        emptyMessage="No se ha encontrado nada."
+        visibleCards={visibleCards}
+        handleShowMore={handleShowMore}
       />
       <HowItWorks />
     </main>

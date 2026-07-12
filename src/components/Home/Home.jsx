@@ -9,6 +9,8 @@ function Home({
   setSearchQuery,
   handleFavorite,
   favorites,
+  visibleCards,
+  handleShowMore,
 }) {
   return (
     <>
@@ -20,6 +22,8 @@ function Home({
         setSearchQuery={setSearchQuery}
         handleFavorite={handleFavorite}
         favorites={favorites}
+        visibleCards={visibleCards}
+        handleShowMore={handleShowMore}
       />
       <About />
     </>

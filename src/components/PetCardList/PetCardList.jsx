@@ -2,7 +2,18 @@ import "./PetCardList.css";
 import PetCard from "../PetCard/PetCard";
 import Preloader from "../Preloader/Preloader";
 
-function PetCardList({ dogs, isLoading, error, handleFavorite, favorites }) {
+function PetCardList({
+  dogs,
+  isLoading,
+  error,
+  handleFavorite,
+  favorites,
+  title,
+  subtitle,
+  emptyMessage = "No hay mascotas para mostrar.",
+  visibleCards,
+  handleShowMore,
+}) {
   if (isLoading) {
     return <Preloader />;
   }
@@ -14,17 +25,22 @@ function PetCardList({ dogs, isLoading, error, handleFavorite, favorites }) {
       </section>
     );
   }
+  if (dogs.length === 0) {
+    return (
+      <section className="pet-list">
+        <h2 className="pet-list__title">{title}</h2>
+        <p className="pet-list__subtitle">{emptyMessage}</p>
+      </section>
+    );
+  }
 
   return (
     <section className="pet-list">
-      <h2 className="pet-list__title">Mascotas en adopción</h2>
-      <p className="pet-list__subtitle">
-        Conoce algunos de los animales que buscan una familia y un hogar lleno
-        de amor.
-      </p>
+      <h2 className="pet-list__title">{title}</h2>
+      <p className="pet-list__subtitle">{subtitle}</p>
 
       <div className="pet-list__grid">
-        {dogs.map((dog) => {
+        {dogs.slice(0, visibleCards).map((dog) => {
           const isFavorite = favorites.some(
             (favorite) => favorite.id === dog.id,
           );
@@ -39,6 +55,16 @@ function PetCardList({ dogs, isLoading, error, handleFavorite, favorites }) {
           );
         })}
       </div>
+
+      {visibleCards < dogs.length && (
+        <button
+          className="pet-list__button"
+          type="button"
+          onClick={handleShowMore}
+        >
+          Mostrar más
+        </button>
+      )}
     </section>
   );
 }
