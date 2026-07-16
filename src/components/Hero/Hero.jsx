@@ -2,6 +2,15 @@ import "./Hero.css";
 import SearchForm from "../SearchForm/SearchForm";
 
 function Hero({ searchQuery, setSearchQuery }) {
+  const handleExplore = () => {
+    const section = document.getElementById("pet-list");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <section className="hero">
       <div className="hero__content">
@@ -14,7 +23,9 @@ function Hero({ searchQuery, setSearchQuery }) {
         </p>
         <SearchForm searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-        <button className="hero__button">Explorar mascotas</button>
+        <button className="hero__button" type="button" onClick={handleExplore}>
+          Explorar mascotas
+        </button>
       </div>
     </section>
   );

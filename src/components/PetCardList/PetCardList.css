@@ -28,6 +28,36 @@
   padding: 50px 20px;
 }
 
+.pet-list__button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.pet-list__button {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pet-list__button:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.pet-list__button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .pet-list {
     padding: 20px 24px 32px;

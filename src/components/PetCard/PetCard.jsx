@@ -5,7 +5,11 @@ function PetCard({ pet, handleFavorite, isFavorite }) {
 
   return (
     <article className="pet-card">
-      <img className="pet-card__image" src={pet.url} alt={breed.name} />
+      <img
+        className="pet-card__image"
+        src={pet.url}
+        alt={`Fotografía de ${breed.name}`}
+      />
 
       <div className="pet-card__content">
         <button
@@ -20,13 +24,11 @@ function PetCard({ pet, handleFavorite, isFavorite }) {
 
         <p className="pet-card__description">🐾 {breed.temperament}</p>
 
-        <p className="pet-card__age">🎂 {breed.life_span}</p>
+        {breed.life_span && (
+          <p className="pet-card__age">🎂 {breed.life_span}</p>
+        )}
 
         <p className="pet-card__city">📍 Disponible para adopción</p>
-
-        <button className="pet-card__button" type="button">
-          Conocer mascota
-        </button>
       </div>
     </article>
   );

@@ -15,19 +15,24 @@ function PetCardList({
   handleShowMore,
 }) {
   if (isLoading) {
-    return <Preloader />;
+    return (
+      <section className="pet-list" id="pet-list">
+        <Preloader />
+      </section>
+    );
   }
 
   if (error) {
     return (
-      <section className="pet-list">
+      <section className="pet-list" id="pet-list">
         <p className="pet-list__error">{error}</p>
       </section>
     );
   }
+
   if (dogs.length === 0) {
     return (
-      <section className="pet-list">
+      <section className="pet-list" id="pet-list">
         <h2 className="pet-list__title">{title}</h2>
         <p className="pet-list__subtitle">{emptyMessage}</p>
       </section>
@@ -35,7 +40,7 @@ function PetCardList({
   }
 
   return (
-    <section className="pet-list">
+    <section className="pet-list" id="pet-list">
       <h2 className="pet-list__title">{title}</h2>
       <p className="pet-list__subtitle">{subtitle}</p>
 
@@ -57,13 +62,15 @@ function PetCardList({
       </div>
 
       {visibleCards < dogs.length && (
-        <button
-          className="pet-list__button"
-          type="button"
-          onClick={handleShowMore}
-        >
-          Mostrar más
-        </button>
+        <div className="pet-list__button-container">
+          <button
+            className="pet-list__button"
+            type="button"
+            onClick={handleShowMore}
+          >
+            Mostrar más
+          </button>
+        </div>
       )}
     </section>
   );

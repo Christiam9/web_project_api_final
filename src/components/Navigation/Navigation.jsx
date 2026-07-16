@@ -5,7 +5,7 @@ function Navigation() {
   return (
     <nav className="nav">
       <ul className="nav__list">
-        <li>
+        <li className="nav__item">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -16,7 +16,7 @@ function Navigation() {
           </NavLink>
         </li>
 
-        <li>
+        <li className="nav__item">
           <NavLink
             to="/favoritos"
             className={({ isActive }) =>
