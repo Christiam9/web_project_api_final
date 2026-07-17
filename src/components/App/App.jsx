@@ -56,37 +56,42 @@ function App() {
   );
 
   return (
-    <>
+    <div className="app">
       <Header />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              dogs={filteredDogs}
-              isLoading={isLoading}
-              error={error}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              handleFavorite={handleFavorite}
-              favorites={favorites}
-              visibleCards={visibleCards}
-              handleShowMore={handleShowMore}
-            />
-          }
-        />
+      <main className="app__content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                dogs={filteredDogs}
+                isLoading={isLoading}
+                error={error}
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+                handleFavorite={handleFavorite}
+                favorites={favorites}
+                visibleCards={visibleCards}
+                handleShowMore={handleShowMore}
+              />
+            }
+          />
 
-        <Route
-          path="/favoritos"
-          element={
-            <Favorites favorites={favorites} handleFavorite={handleFavorite} />
-          }
-        />
-      </Routes>
+          <Route
+            path="/favoritos"
+            element={
+              <Favorites
+                favorites={favorites}
+                handleFavorite={handleFavorite}
+              />
+            }
+          />
+        </Routes>
+      </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

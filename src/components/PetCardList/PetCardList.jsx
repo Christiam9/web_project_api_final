@@ -45,7 +45,7 @@ function PetCardList({
       <p className="pet-list__subtitle">{subtitle}</p>
 
       <div className="pet-list__grid">
-        {dogs.slice(0, visibleCards).map((dog) => {
+        {dogs.slice(0, visibleCards ?? dogs.length).map((dog) => {
           const isFavorite = favorites.some(
             (favorite) => favorite.id === dog.id,
           );

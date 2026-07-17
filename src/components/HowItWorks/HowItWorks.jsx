@@ -23,7 +23,7 @@ function HowItWorks() {
         <article className="how-it-works__step">
           <h3 className="how-it-works__step-title">3. Adopta</h3>
           <p className="how-it-works__step-text">
-            Inicia sesión y envía tu solicitud de adopción.
+            Contacta con el refugio para iniciar el proceso de adopción.
           </p>
         </article>
       </div>
