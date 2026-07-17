@@ -1,0 +1,85 @@
+.pet-card {
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.pet-card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.pet-card__content {
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pet-card__favorite {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 26px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+
+  transition: transform 0.2s ease;
+}
+
+.pet-card__favorite:hover {
+  transform: scale(1.1);
+}
+
+.pet-card__name {
+  margin: 0;
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.pet-card__description,
+.pet-card__age,
+.pet-card__city {
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+@media screen and (max-width: 768px) {
+  .pet-card {
+    width: 300px;
+  }
+
+  .pet-card__image {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pet-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .pet-card__image {
+    height: 220px;
+  }
+
+  .pet-card__name {
+    font-size: 22px;
+  }
+}

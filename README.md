@@ -1,16 +1,30 @@
-# React + Vite
+# AdoptaPet 🐶
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AdoptaPet es una aplicación desarrollada con React y Vite que permite explorar mascotas disponibles para adopción mediante una API de terceros. Los usuarios pueden buscar mascotas por raza, marcar sus favoritas y conservarlas mediante LocalStorage.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔍 Búsqueda de mascotas por raza.
+- ❤️ Agregar y eliminar mascotas favoritas.
+- 💾 Persistencia de favoritos con LocalStorage.
+- ➕ Carga progresiva mediante el botón "Mostrar más".
+- 📱 Diseño adaptable a diferentes tamaños de pantalla.
+- 🧭 Navegación entre páginas con React Router.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router
+- Vite
+- JavaScript (ES6+)
+- CSS
+- Fetch API
+- LocalStorage
 
-## Expanding the ESLint configuration
+## Aplicación desplegada
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://eclectic-piroshki-912c55.netlify.app/
+
+## Autor
+
+Christian Ruiz
