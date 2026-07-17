@@ -27,4 +27,4 @@ https://eclectic-piroshki-912c55.netlify.app/
 
 ## Autor
 
-Christian Ruiz
+Christiam Ruiz
