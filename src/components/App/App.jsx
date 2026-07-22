@@ -22,7 +22,13 @@ function App() {
   useEffect(() => {
     getDogs()
       .then((data) => {
-        setDogs(data);
+        const newDogs = data.filter(
+          (dog) => !favorites.some((favorite) => favorite.id === dog.id),
+        );
+
+        const mergedDogs = [...favorites, ...newDogs].slice(0, 9);
+
+        setDogs(mergedDogs);
       })
       .catch((err) => {
         console.error(err);
