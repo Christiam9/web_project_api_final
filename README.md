@@ -1,6 +1,6 @@
 # AdoptaPet 🐶
 
-AdoptaPet es una aplicación desarrollada con React y Vite que permite explorar mascotas disponibles para adopción mediante una API de terceros. Los usuarios pueden buscar mascotas por raza, marcar sus favoritas y conservarlas mediante LocalStorage.
+AdoptaPet es una aplicación web desarrollada con React y Vite que permite explorar mascotas disponibles para adopción mediante una API de terceros. Los usuarios pueden buscar mascotas por raza, agregar favoritas y conservarlas mediante LocalStorage.
 
 ## Objetivo
 
@@ -33,9 +33,17 @@ Durante el desarrollo trabajé en la integración de la API, la gestión del est
 - Fetch API
 - LocalStorage
 
+## Resultado
+
+AdoptaPet cuenta con una interfaz responsive que permite explorar mascotas, realizar búsquedas y gestionar favoritos de forma sencilla. La aplicación está desplegada en Netlify y puede probarse directamente desde el navegador.
+
 ## Aplicación desplegada
 
 https://eclectic-piroshki-912c55.netlify.app/
+
+## Código fuente
+
+🔗 [Repositorio en GitHub](https://github.com/Christiam9/web_project_api_final)
 
 ## Autor
 
